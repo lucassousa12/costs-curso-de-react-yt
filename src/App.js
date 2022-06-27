@@ -1,10 +1,13 @@
-import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import Home from './components/pages/Home'
 import Company from './components/pages/Company'
 import Contact from './components/pages/Contact'
+import Projects from './components/pages/Projects'
 import NewProject from './components/pages/NewProject'
 
+import Navbar from './components/layout/Navbar/Index'
+import Footer from './components/layout/Footer/Index'
 import Container from './components/layout/Container/Index'
 
 import GlobalStyle from './GlobalStyle'
@@ -12,20 +15,7 @@ import GlobalStyle from './GlobalStyle'
 function App() {
   return (
     <Router>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/empresa">Empresa</Link>
-        </li>
-        <li>
-          <Link to="/contato">Contato</Link>
-        </li>
-        <li>
-          <Link to="/novoProjeto">Novo Projeto</Link>
-        </li>
-      </ul>
+      <Navbar />
 
       <Container customClass="min-height">
         <Routes>
@@ -36,10 +26,12 @@ function App() {
           <Route path="/contato" element={<Contact />}></Route>
 
           <Route path="/novoProjeto" element={<NewProject />}></Route>
+
+          <Route path="/projects" element={<Projects />}></Route>
         </Routes>
       </Container>
 
-      <p>Footer</p>
+      <Footer />
       <GlobalStyle />
     </Router>
   );
