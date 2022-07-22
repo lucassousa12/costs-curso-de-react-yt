@@ -1,5 +1,17 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "name": "Comprar um carro",
+      "budget": "15000",
+      "category": {
+        "id": "1",
+        "name": "Infraestrutura"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 1
+    }
+  ],
   "categories": [
     {
       "id": 1,
